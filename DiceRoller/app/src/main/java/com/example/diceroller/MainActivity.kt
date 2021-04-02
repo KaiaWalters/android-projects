@@ -6,7 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 
-class MainActivity : AppCompatActivity() {
+open class MainActivity : AppCompatActivity() {
     var diceValue = 0
     val rollButton: Button = findViewById(R.id.roll_button)
     val countButton: Button = findViewById(R.id.count_button)

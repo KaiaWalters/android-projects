@@ -1,16 +1,18 @@
 package com.example.diceroller
+
 import org.junit.Assert.*
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 
-//@RunWith(RobolectricTestRunner.class)
-class DiceRollTest {
+
+@RunWith(RobolectricTestRunner::class)
+class DiceRollTest : MainActivity() {
     @Test
-   fun displayvaluewhenbuttonisclicked()
+   fun display_value_when_button_is_clicked()
     {
         //arrange
-        var subject: MainActivity = MainActivity()
+        var subject = MainActivity()
         var diceValue = subject.resultText.text
         diceValue = "Dice Rolled!"
         var diceType = (diceValue is String)
@@ -25,3 +27,4 @@ class DiceRollTest {
         assertEquals(false, actual)
     }
 }
+
